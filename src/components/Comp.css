@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+button {
+    cursor: pointer;
+}
+
+/* nav bar styles */
+
+.top-section {
+    text-align: center;
+    background-color: #070c47;
+    padding: 2px;
+    color: white;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: black;
+    background-color: #dadfea;
+    justify-content: space-between;
+    padding: 0 50px;
+    border: 1px solid black;
+}
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+.icon-wrapper div {
+    margin-left: -25px;
+    font-size: 1.1em;
+}
+.nav-bar .link {
+    color: black;
+    text-decoration: none;
+}
+.nav-bar .left, .center, .right {
+    display: flex;
+    align-items: center;
+}
+.link div, i {
+    padding: 30px 15px;
+}
+.sign-in-nav {
+    display: flex;
+    margin-left: 15px;
+}
+.sign-in-nav div:nth-child(2) {
+    margin: 0 5px;
+}
+.sign-in-nav div {
+    cursor: pointer;
+    color: #31353b;
+    font-size: 0.9em;
+}
+.sign-in-nav a {
+    color: black;
+    text-decoration: none;
+}
+.nav-bar .link div, i {
+    transition: 0.6s;
+    width: 90px;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+}
+.nav-bar .link div:hover, i:hover{
+    letter-spacing: 2px;
+    color: #000aa1;
+}
+/* home page styles */
+
+.display-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 120px 0 120px;
+    color: white;
+    height: 100%;
+    align-items: flex-start;
+    font-size: 1.1em;
+}
+.display-wrapper .display-img img {
+    width: 120%;
+    margin-top: -50px;
+}
+.wrapper {
+    width: 40%;
+}
+.display-wrapper div:first-child {
+    width: 50%;
+    padding-right: 30%;
+}
+.display-wrapper button {
+    background-color: #070c47;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+.display-wrapper .display-title {
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.display-wrapper .display-description {
+    margin-left: 10px;
+    margin-bottom: 25px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+.buttons-wrapper button:nth-child(2)  {
+    background-color: #cea135;
+    margin-left: 25px;
+}
+.buttons-wrapper button:nth-child(1) {
+    background-color: #788496;
+}
+.home-page {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/6/c/35748.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-attachment: fixed;
+    border-top: 20px solid white;
+}
+
+/* products page styles */
+
+.products-page-wrapper {
+    justify-items: center;
+    text-align: center;
+    padding-top: 20px;
+    /* background-color: #070c47; */
+    font-family: 'Open Sans';
+}
+.products-page-wrapper-total {
+    background-image: url('https://mariajesus.co/wp-content/uploads/2018/09/Burj-Khalifa-Dubai-01-1920x2899.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.products-page-wrapper .category {
+    color: #788496;
+    text-transform: capitalize;
+    margin: 5px 0;
+    font-size: 0.94em;
+
+}
+.products-page-wrapper .title {
+    font-size: 1.05em;
+    font-weight: 600;
+}
+.products-page-wrapper .price {
+    font-size: 1.2em;
+    color: red;
+    margin-top: 15px;
+    font-weight: 700;
+}
+.product-title {
+    text-align: center;
+    font-size: 2.4em;
+    letter-spacing: 10px;
+    background: none;
+    font-weight: 200;
+    padding: 10px 0;
+    margin-top: 0;
+    color: white;
+}
+.products-page-wrapper button {
+    font-size: 1.06em;
+    color: white;
+    background-color: #070c47;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 18px;
+    margin: 30px 20px;
+}
+.products-page-wrapper .more-info-btn {
+    background-color: #788496;
+}
+.products-page-wrapper .link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.06em;
+}
+.two-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.three-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.four-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.product-item-wrapper {
+    margin-bottom: 80px;
+    /* height: 470px; */
+    width: 315px;
+    padding: 10px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px rgba(59, 59, 59, 0.7);
+}
+.product-item-wrapper .price {
+    border-bottom: 1px solid #dadfea;
+    padding-bottom: 10px;
+}
+.filter-bar-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.filter-bar-wrapper select {
+    padding: 0 20px;
+}
+.category-wrapper {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+}
+.product-img {
+    object-fit: contain;
+    height: 270px;
+    width: 250px;
+    margin: 10px 0;
+}
+.selected {
+    color: red;
+    border-bottom: 2px solid red;
+    font-size: 1.03em;
+}
+#target {
+    /* position: absolute; */
+    margin-left: -1000px;
+    color: white;
+    background-color: #31353b;
+    font-size: 1.3em;
+    padding: 10px 40px;
+    width: 240px;
+    text-align: center;
+    border-radius: 2px;
+    top: 50px;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
+    position: fixed;
+}
+
+/* cart styles */
+
+.nothing-in-cart {
+    background-image: url('https://i.pinimg.com/originals/fb/19/87/fb198758d12be1f7cb70ef3164673683.jpg');
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 12%;
+    text-align: center;
+}
+.nothing-in-cart .content {
+    text-align: center;
+}
+.center {
+    margin: 0 auto;
+    width: 310px;
+}
+.nothing-in-cart .content h1 {
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.nothing-in-cart .message {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 22px;
+}
+.nothing-in-cart button {
+    text-align: center;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    padding: 10px 22px;
+}
+.center {
+    text-align: center;
+    color: white;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 4px 20px;
+}
+.cart-page-wrapper {
+    min-height: 60vh
+}
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.cart-item .title {
+    width: 40%;
+}
+
+/* product details styles */
+
+
+.display-product {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+.display-product .title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.display-product .img {
+    width: 500px;
+    margin-bottom: 30px;
+    height: 320px;
+    object-fit: contain;
+}
+.display-product .description {
+    width: 600px;
+    font-size: 1.4em;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+.display-product .price {
+    font-weight: 600;
+    border-bottom: 3px solid black;
+    width: 80px;
+    text-align: center;
+    font-size: 1.3em;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+.display-product .rating {
+    font-size: 1.2em;
+}
+.display-product button {
+    padding: 10px 18px;
+    font-size: 1.06em;
+    background-color: #788496;
+    color: white;
+    border-radius: 3px;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+.display-product .return {
+    background-color: #070c47;
+}
+.display-product .link {
+    color: white;
+    font-size: 1.06em;
+    text-decoration: none;
+}
+.loading {
+    border: 8px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-color: orange transparent transparent;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    margin-top: 16%;
+}
+
+@keyframes spin {
+    100% {transform: rotate(360deg); filter:hue-rotate(360deg)}
+} 
+
+/* sub total styles */
+
+.subtotal-wrapper {
+    position: absolute;
+    right: -20px;
+    top: 85px;
+    padding: 20px;
+    box-shadow: 0px 0px 6px 3px rgba(163,163,163,1);
+    margin-right: 100px;
+    margin-top: 40px;
+    width: 300px;
+}
+.subtotal-wrapper .sub-title {
+    font-size: 1.9em;
+    display: flex;
+    border-bottom: 3px solid #222f3e;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+.subtotal, .shipping {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.shipping {
+    border-bottom: 2px solid #222f3e;
+    padding-bottom: 8px;
+}
+.order-total {
+    display: flex;
+    font-size: 1.4em;
+    font-weight:550;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.home-image-wrapper {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+    background-image: url('https://live.staticflickr.com/167/387606049_9045614ef9_b.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 1.3em;
+}
+.home-image-wrapper .content {
+    text-align: center;
+}
+.home-image-wrapper .content h1 {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+}
+.home-image-wrapper .content h3 {
+    font-weight: 450;
+    font-size: 1.8em;
+    margin: 0;
+}
+.home-image-wrapper .content button {
+    color: white;
+    border-radius: 20px;
+    border: 3px solid white;
+    font-size: .8em;
+    padding: 10px 20px;
+    font-weight: 700;
+    background: none;
+    margin-top: 25px;
+}
+
+/* modal styles */
+
+.modal-container {
+    /* display: none; */
+    background-color: rgba(17, 18, 43, 0.5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal-container > .modal-content {
+    background-color: white;
+    width: 33%;
+    margin: 0 auto;
+    margin-top: 13%;
+    height: 41%;
+    border-radius: 5px;
+    padding: 17px;
+    position: relative;
+    box-shadow: 0px 0px 20px 3px rgba(102,102,102,1);
+}
+.close {
+    position: absolute;
+    cursor: pointer;
+}
+#sign-in {
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    border: none;
+    background-color: #30D158;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 22px;
+    margin-top: 15px;
+
+}
+.modal-container .sign-in {
+    font-size: 1.7em;
+    text-align: center;
+}
+.modal-container .sign-in i {
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+.modal-container .sign-in-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.modal-container .modal-input-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#create-account-modal .modal-content{
+    height: 400px;
+}
+#create-account-modal .modal-input-wrapper {
+    width: 75%;
+    font-size: 0.9em;
+}
+.modal-container .modal-input {
+    margin: 20px 0;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-container .close {
+    font-weight: 750;
+    cursor: pointer;
+}
+.modal-container .create-account {
+    text-align: center;
+    font-size: 0.9em;
+}  
+
+/* settings page styles */
+
+.settings-page-wrapper {
+    padding-top: 16%;
+    background-image: url('https://images.wallpaperscraft.com/image/city_night_buildings_sky_106151_3840x2400.jpg');
+    background-size: cover;
+    height: 60vh;
+}
+.settings-button-wrapper button {
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    display: block;
+    background: none;
+    border: 2px solid white;
+    font-weight: 600;
+}
+.settings-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.settings-button-wrapper div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.settings-button-wrapper button:first-child {
+    margin-bottom: 20px;
+}
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #070c47;
+    color: white;
+    border-top: 10px solid white;
+}
+.footer-wrapper .right {
+    display: flex;
+    flex-direction: column;
+}
+.footer-wrapper .right img {
+    width: 160px;
+}
+.footer-wrapper .center-footer div {
+    margin: 0;
+    padding: 0;
+}
+.footer-wrapper .center-footer i {
+    padding: 17px 0px;
+    font-size: 1.1em;
+}
+.footer-wrapper .left div{
+    margin: 7px 0;
+    margin-left: -30px;
+}
+.footer-wrapper .center-footer .title {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+}
+.sign-in-success {
+    color: green;
+    text-align: center;
+    display: none; 
+}
