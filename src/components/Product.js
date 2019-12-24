@@ -3,26 +3,19 @@ import store from '../store';
 import $ from 'jquery';
 import { Link } from 'react-router-dom';
 
-class Product extends React.Component {
+export default class Product extends React.Component {
     addToCart = (product) => {
-        $("#target").animate({
-            marginLeft: 100
-        }, 500);
+        $("#target").animate({marginLeft: 100}, 500);
         store.dispatch({
-            type: "ADD_PRODUCT",
-            product: product,
-            price: Number(product.price)
+            type: "ADD_PRODUCT", product: product, price: Number(product.price)
         })
         setTimeout(() => {
-            $("#target").animate({
-                marginLeft: "-1000px"
-            }, 500);
+            $("#target").animate({marginLeft: "-1000px"}, 500);
         }, 1500)
     }
     displayItem = (prod) => {
         store.dispatch({
-            type: "DISPLAY_PRODUCT",
-            product: prod
+            type: "DISPLAY_PRODUCT", product: prod
         })
     }
     render(){ 
@@ -34,10 +27,8 @@ class Product extends React.Component {
                 <div className="title">{title}</div>
                 <div className="price">${price}</div>
                 <button className="cart-btn" onClick={() => this.addToCart(this.props.item)}>Add to Cart</button>
-                <Link to="/product-info" className="link"><button onClick={() => this.displayItem(this.props.item)} className="more-info-btn">More info</button></Link>
+                <Link to={`product-info/${this.props.item.id}`} className="link"><button onClick={() => this.displayItem(this.props.item)} className="more-info-btn">More info</button></Link>
             </div>
         )
     }
 }
-
-export default Product;

@@ -3,18 +3,14 @@ import store from '../store';
 import QuantityBox from './QuantityBox';
 import $ from 'jquery';
 
-class CartItem extends React.Component {
+export default class CartItem extends React.Component {
     remove = (e, prod) => {
         $(e.parentNode).animate({
-            marginLeft: "-2000",
-            marginBottom: "-130",
-            opacity: 0
+            marginLeft: "-2000", marginBottom: "-130", opacity: 0
         }, 400, function() {
             store.dispatch({
-                type: "REMOVE_PRODUCT",
-                product: prod.product,
-                price: Number(prod.product.price),
-                quantity: prod.quantity
+                type: "REMOVE_PRODUCT", product: prod.product,
+                price: Number(prod.product.price), quantity: prod.quantity
             })
         })
     }
@@ -35,5 +31,3 @@ class CartItem extends React.Component {
         )
     }
 }
-
-export default CartItem;

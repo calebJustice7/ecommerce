@@ -15,16 +15,39 @@ const secondReducer = (state = initState, action) => {
         }
     }
     else if(action.type === "CHANGE_CATEGORY") {
-        console.log(action.category);
         if(action.category === "all products") {
             return {
                 ...state,
-                category: null
+                category: null,
+                searchCategory: null
             }
         } else {
             return {
                 ...state,
-                category: action.category
+                category: action.category,
+                searchCategory: null
+            }
+        }
+    }
+    else if(action.type === "SEARCH_CATEGORY") {
+        if(action.search === '') {
+            return {
+                ...state,
+                searchCategory: null,
+                category: null
+            }
+        } else {
+            let newArr = [];
+            for(let i = 0; i < state.apiProducts.length; i++) {
+                let item = state.apiProducts[i].title.toLowerCase();
+                if(item.includes(action.search.toLowerCase())){
+                    newArr.push(state.apiProducts[i]);
+                }
+            }
+            return {
+                ...state,
+                searchCategory: newArr,
+                category: null
             }
         }
     }

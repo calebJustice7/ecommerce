@@ -2,20 +2,14 @@ import React from 'react';
 import store from '../store';
 import $ from 'jquery';
 
-class DisplayItem extends React.Component {
+export default class DisplayItem extends React.Component {
     addToCart = (product) => {
-        $("#target").animate({
-            marginLeft: 100
-        }, 500);
+        $("#target").animate({marginLeft: 100}, 500);
         store.dispatch({
-            type: "ADD_PRODUCT",
-            product: product,
-            price: Number(product.price)
+            type: "ADD_PRODUCT", product: product, price: Number(product.price)
         })
         setTimeout(() => {
-            $("#target").animate({
-                marginLeft: "-1000px"
-            }, 500);
+            $("#target").animate({marginLeft: "-1000px"}, 500);
         }, 1500)
     }
     render() {
@@ -32,5 +26,3 @@ class DisplayItem extends React.Component {
         )
     }
 }
-
-export default DisplayItem

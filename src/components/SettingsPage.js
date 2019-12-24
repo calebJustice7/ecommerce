@@ -3,9 +3,9 @@ import SettingsModal from './SettingsModal';
 import $ from 'jquery';
 import store from '../store/index';
 
-class SettingsPage extends React.Component {
+export default class SettingsPage extends React.Component {
     componentDidMount() {
-        $(".modal").hide();
+        $(".modal").fadeOut(0);
         store.subscribe(() => this.forceUpdate());
     }
     show() {
@@ -13,11 +13,9 @@ class SettingsPage extends React.Component {
     }
     showSignIn(){
         if(store.getState().userSignIn.signedIn === false){
-            $(".sign-in-modal").show(200);
+            $(".sign-in-modal").fadeIn(200);
         } else {
-            store.dispatch({
-                type: "SIGN_OUT"
-            })
+            store.dispatch({type: "SIGN_OUT"})
         }
     }
     render() {
@@ -25,7 +23,7 @@ class SettingsPage extends React.Component {
         return (
             <div className="settings-page-wrapper">
                 <SettingsModal />
-                <div class="settings-button-wrapper">
+                <div className="settings-button-wrapper">
                     <div>
                         <button onClick={this.show}>Create Account</button>
                         <button onClick={this.showSignIn}>{text}</button> 
@@ -35,5 +33,3 @@ class SettingsPage extends React.Component {
         )
     }
 }
-
-export default SettingsPage;

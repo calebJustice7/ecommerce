@@ -14,6 +14,7 @@ export let initState = {
     users: [],
     signedIn: false,
     currentUser: {},
+    searchCategory: null
 }
 
 const reducer = combineReducers({

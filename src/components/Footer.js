@@ -11,14 +11,12 @@ function Footer(){
                     <div>About us</div>
                     <div>Blog</div>
                 </div>
-
                 <div className="center-footer">
                     <div className="title">Follow us on social Media</div>
-                    <div><i class="fab fa-facebook"></i>Facebook</div>
-                    <div><i class="fab fa-instagram"></i>Instagram</div>
-                    <div><i class="fab fa-twitter"></i>Twitter</div>
+                    <div><i className="fab fa-facebook"></i>Facebook</div>
+                    <div><i className="fab fa-instagram"></i>Instagram</div>
+                    <div><i className="fab fa-twitter"></i>Twitter</div>
                 </div>
-
                 <div className="right">
                     <div>Payment Methods</div>
                     <img src="https://image.flaticon.com/sprites/new_packs/196535-payment-method.png" alt="payment methods"/>

@@ -10,6 +10,7 @@ import CartPage from './components/CartPage';
 import ProductInfoPage from './components/ProductInfoPage';
 import SettingsPage from './components/SettingsPage';
 import Footer from './components/Footer';
+import CheckoutPage from './components/CheckoutPage';
 
 class App extends React.Component {
   render(){
@@ -22,8 +23,9 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage}/>
               <Route path="/products" component={ProductsPage}/>
               <Route path="/cart" component={CartPage} />
-              <Route path="/product-info" component={ProductInfoPage} />
+              <Route path="/product-info/:id" component={ProductInfoPage} />
               <Route path="/settings" component={SettingsPage} />
+              <Route path="/checkout" component={CheckoutPage} />
             </Switch>
             <Footer />
         </Router>
