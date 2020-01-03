@@ -56,12 +56,12 @@ export default class SignInModal extends React.Component {
                 <div className="sign-in-modal-input-wrapper">
                     <div className="sign-in-modal-input">
                     <i className="fas fa-user"></i>
-                        <input value={this.state.user} id="username" onChange={this.updateUser} type="text" className="user-name" placeholder="User name" />
+                        <input value={this.state.user} onChange={this.updateUser} type="text" className="user-name" placeholder="User name" />
                     </div>
     
                     <div className="sign-in-modal-input">
                     <i className="fas fa-key"></i>
-                        <input value={this.state.pass} id="password" onChange={this.updatePass} type="password" className="pass-word" placeholder="Password" />
+                        <input value={this.state.pass} onChange={this.updatePass} type="password" className="pass-word" placeholder="Password" />
                     </div>
                     <div className="sign-in-success">Sign in successful!</div>
                     <div className="sign-in-btn">

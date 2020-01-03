@@ -8,7 +8,10 @@ import {Link} from 'react-router-dom';
 
 export default class CartPage extends React.Component {
     componentDidMount() {
-        store.subscribe(() => this.forceUpdate());
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
     }
     render(){
         if(store.getState().apiDisplay.productsList.length === 0) {return <NothingInCart /> } 

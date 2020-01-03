@@ -7,16 +7,14 @@ import AllProducts from './AllProducts';
 import SearchFilterProducts from './SearchFilterProducts';
 
 export default class ProductsPage extends React.Component {
-    constructor(props){
-        super(props);
-        store.subscribe(() => this.forceUpdate());
-    }
     componentDidMount() {
         $(".search-bar-wrapper").show(200);
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
     }
     componentWillUnmount(){
         store.dispatch({type: "CHANGE_CATEGORY",category: 'all products'})
         $(".search-bar-wrapper").hide(200);
+        this.unsubscribe();
     }
     render() {
         let c = store.getState().cartReducer.category;

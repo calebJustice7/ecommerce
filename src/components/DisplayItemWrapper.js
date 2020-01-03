@@ -4,7 +4,7 @@ import DisplayItem from './DisplayItem';
 
 export default class DisplayItemWrapper extends React.Component {
     componentDidMount(){
-        store.subscribe(() => this.forceUpdate());
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
         fetch('https://my-json-server.typicode.com/tdmichaelis/json-api/products')
         .then(res => res.json())
         .then(json => {
@@ -13,6 +13,9 @@ export default class DisplayItemWrapper extends React.Component {
                 apiProductsArr: json
             })
         })
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
     }
     render(){
         if(store.getState().cartReducer.itemsLoaded){

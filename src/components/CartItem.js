@@ -15,7 +15,10 @@ export default class CartItem extends React.Component {
         })
     }
     componentDidMount() {
-        store.subscribe(() => this.forceUpdate());
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
     }
     render(){
         const {price, img, title} = this.props.item.product;

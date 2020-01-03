@@ -6,7 +6,7 @@ import store from '../store/index';
 export default class SettingsPage extends React.Component {
     componentDidMount() {
         $(".modal").fadeOut(0);
-        store.subscribe(() => this.forceUpdate());
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
     }
     show() {
         $(".modal").fadeIn(300);
@@ -17,6 +17,9 @@ export default class SettingsPage extends React.Component {
         } else {
             store.dispatch({type: "SIGN_OUT"})
         }
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
     }
     render() {
         let text = store.getState().userSignIn.signedIn ? 'Sign Out' : 'Sign in';

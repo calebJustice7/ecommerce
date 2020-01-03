@@ -47,12 +47,12 @@ class SettingsModal extends React.Component {
                 <div className="modal-input-wrapper">
                     <div className="modal-input">
                         <label>Username</label>
-                        <input value={this.state.user} id="username" className="user" onChange={this.updateUser} type="text" placeholder="User name" />
+                        <input value={this.state.user} className="user" onChange={this.updateUser} type="text" placeholder="User name" />
                     </div>
     
                     <div className="modal-input">
                         <label>Password</label>
-                        <input value={this.state.pass} id="password" className="pass" onChange={this.updatePass} type="password" placeholder="Password" />
+                        <input value={this.state.pass} className="pass" onChange={this.updatePass} type="password" placeholder="Password" />
                     </div>
                     <div className="sign-in-btn">
                         <button id="sign-in" onClick={this.createAccount}>Create Account</button>

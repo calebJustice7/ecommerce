@@ -45,7 +45,7 @@ class CheckoutForm extends React.Component {
                         </div>
                         <div className="terms-wrapper">
                             <input type="checkbox"/>
-                            <div>Do you agree to our <a>Terms And Conditions?</a></div>
+                            <div>Do you agree to our <b>Terms And Conditions?</b></div>
                         </div>
                         <button id="final-submit-btn" onClick={this.submit}>Checkout</button>
                         <div className="loading-wrapper">
