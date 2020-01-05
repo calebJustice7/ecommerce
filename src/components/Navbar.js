@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TopSection from './TopSection';
 import SignInModal from './SignInModal';
 import $ from 'jquery';
@@ -11,12 +11,16 @@ export default class Navbar extends React.Component {
     componentDidMount() {
         $(".sign-in-modal").fadeOut(200);
         store.subscribe(() => this.forceUpdate());
+        // $(".burger-test").hide();
     }
     render() {
-        return (<>
-                <SignInModal className="sign-in-modal"/>
+        return (
+            <div>
+                <SignInModal className="sign-in-modal" />
                 <div className="nav-bar">
-                    <LeftNavBar/>
+                    <LeftNavBar />
+
+                    <div className="burger-test">
                     <CenterNavBar />
                     <div className="right">
                         <div className="icon-wrapper">
@@ -25,8 +29,11 @@ export default class Navbar extends React.Component {
                         </div>
                         <Link to="/settings" className="link"><i className="fas fa-cogs"></i></Link>
                     </div>
+                    </div>
+
                 </div>
                 <TopSection />
-        </>)
+            </div>
+        )
     }
 }

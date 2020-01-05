@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import CheckoutSuccessful from './CheckoutSuccessful';
+import DiscountCodeForm from './DiscountCodeForm';
 
 class CheckoutForm extends React.Component {
     constructor(props) {
@@ -43,6 +44,7 @@ class CheckoutForm extends React.Component {
                             <label>Street Address</label>
                             <input type="text" placeholder="Enter Street Address"/>
                         </div>
+                        <DiscountCodeForm/>
                         <div className="terms-wrapper">
                             <input type="checkbox"/>
                             <div>Do you agree to our <b>Terms And Conditions?</b></div>

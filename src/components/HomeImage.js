@@ -5,7 +5,7 @@ function HomeImage() {
         return (
             <div className="home-image-wrapper">
                 <div className="content">
-                    <h1>2019</h1>
+                    <h1>2020</h1>
                     <h3>Brand New Products.</h3>
                     <Link to="/products" className="link-btn"><button>SEE MORE</button></Link>
                     <h2>Scroll Down to View More</h2>

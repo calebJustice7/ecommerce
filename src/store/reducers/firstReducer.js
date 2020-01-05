@@ -11,6 +11,13 @@ const firstReducer = (state = initState, action) => {
             totalPrice: state.totalPrice - action.price * action.quantity
         }
     }
+    else if(action.type === "APPLY_DISCOUNT") {
+        let newPrice = state.totalPrice * .80;
+        return {
+            ...state,
+            totalPrice: newPrice
+        }
+    }
     else if (action.type === "ADD_PRODUCT") {
         let x = state.productsList.findIndex(p => p.product.id === action.product.id);
         if(x === -1) {

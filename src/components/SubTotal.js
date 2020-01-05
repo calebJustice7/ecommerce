@@ -2,6 +2,12 @@ import React from 'react';
 import store from '../store';
 
 export default class SubTotal extends React.Component {
+    componentDidMount() {
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
     render(){
         let totPrice = store.getState().apiDisplay.totalPrice;
         let wShipping = totPrice + 10;
