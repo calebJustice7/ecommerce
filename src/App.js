@@ -13,6 +13,7 @@ import SettingsPage from './components/SettingsPage';
 import Footer from './components/Footer';
 import CheckoutPage from './components/CheckoutPage';
 import WishListPage from './components/WishListPage';
+import WishListMessage from './components/WishListMessage';
 
 class App extends React.Component {
   render(){
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Router>
             <Navbar />
             <CartMessage/>
+            <WishListMessage />
             <Switch>
               <Route exact path="/" component={HomePage}/>
               <Route path="/products" component={ProductsPage}/>

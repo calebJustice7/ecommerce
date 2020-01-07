@@ -23,6 +23,10 @@ export default class Product extends React.Component {
             type: "WISHLIST_ADD",
             product
         })
+        $(".wish-list-message").animate({marginLeft: 100}, 800);
+        setTimeout(() => {
+            $(".wish-list-message").animate({marginLeft: "-1000px"}, 500);
+        }, 2000)
     }
     render(){ 
         const {title, price, img, category} = this.props.item;
