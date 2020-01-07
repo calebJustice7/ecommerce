@@ -35,13 +35,18 @@ class DiscountCodeForm extends React.Component {
         })
     }
     applyDiscount() {
-        $(".discount-message").slideDown(200);
-        $(".discount-message").html("Discount applied!")
-        $(".discount-message").css("color", "green");
-        store.dispatch({
-            type: "APPLY_DISCOUNT"
-        })
-        console.log(store.getState());
+        if(store.getState().apiDisplay.discountCodesApplied === 0){
+            $(".discount-message").slideDown(200);
+            $(".discount-message").html("Discount applied!")
+            $(".discount-message").css("color", "green");
+            store.dispatch({
+                type: "APPLY_DISCOUNT"
+            })
+        } else {
+            $(".discount-message").slideDown(200);
+            $(".discount-message").html("Discount Code Already Used")
+            $(".discount-message").css("color", "goldenrod");
+        }
     }
     render() {
         return (

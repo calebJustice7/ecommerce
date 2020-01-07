@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 export default class CenterNavBar extends React.Component {
     render() {
         return (
-            <div className="center">
+            <div className="center center-navbar">
                 <Link to="/" className="link"><div>Home</div></Link>
                 <Link to="/products" className="link"><div>Products</div></Link>
                 <SearchBar />

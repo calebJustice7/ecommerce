@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 
 export default class Product extends React.Component {
     addToCart = (product) => {
-        $("#target").animate({marginLeft: 100}, 500);
+        $("#target").animate({marginLeft: 100}, 800);
         store.dispatch({
             type: "ADD_PRODUCT", product: product, price: Number(product.price)
         })
         setTimeout(() => {
             $("#target").animate({marginLeft: "-1000px"}, 500);
-        }, 1500)
+        }, 2500)
     }
     displayItem = (prod) => {
         store.dispatch({
             type: "DISPLAY_PRODUCT", product: prod
+        })
+    }
+    addToWishList = (product) => {
+        store.dispatch({
+            type: "WISHLIST_ADD",
+            product
         })
     }
     render(){ 
@@ -28,6 +34,7 @@ export default class Product extends React.Component {
                 <div className="price">${price}</div>
                 <button className="cart-btn" onClick={() => this.addToCart(this.props.item)}>Add to Cart</button>
                 <Link to={`product-info/${this.props.item.id}`} className="link"><button onClick={() => this.displayItem(this.props.item)} className="more-info-btn">More info</button></Link>
+                <i onClick={() => this.addToWishList(this.props.item)} className="fas fa-heart"></i>
             </div>
         )
     }

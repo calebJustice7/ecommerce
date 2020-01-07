@@ -12,10 +12,15 @@ const firstReducer = (state = initState, action) => {
         }
     }
     else if(action.type === "APPLY_DISCOUNT") {
-        let newPrice = state.totalPrice * .80;
-        return {
-            ...state,
-            totalPrice: newPrice
+        if(state.discountCodesApplied === 0) {
+            let newPrice = state.totalPrice * .90;
+            return {
+                ...state,
+                totalPrice: newPrice,
+                discountCodesApplied: 1
+            }
+        } else {
+            return state;
         }
     }
     else if (action.type === "ADD_PRODUCT") {
@@ -51,6 +56,16 @@ const firstReducer = (state = initState, action) => {
             ...x,
             totalPrice: price
         };
+    }
+    else if(action.type === "CLEAR_CART") {
+        return {
+            ...state,
+            productsList: [],
+            numItemsInCart: 0,
+            totalPrice: 0,
+            discountCodesApplied: 0,
+
+        }
     }
     else {
         return state;

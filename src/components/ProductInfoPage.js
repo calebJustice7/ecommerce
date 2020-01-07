@@ -6,14 +6,14 @@ import $ from 'jquery';
 
 export default class ProductInfoPage extends React.Component {
     addToCart = () => {
-        $("#target").animate({marginLeft: 100}, 500);
+        $("#target").animate({marginLeft: 100}, 800);
         store.dispatch({
             type: "ADD_PRODUCT", product: store.getState().cartReducer.prodToDisplay,
             price: Number(store.getState().cartReducer.prodToDisplay.price)
         })
         setTimeout(() => {
             $("#target").animate({marginLeft: "-1000px"}, 500);
-        }, 1500)
+        }, 2500)
     }
     render() {
         let {price, img, title, description, rating} = store.getState().cartReducer.prodToDisplay;

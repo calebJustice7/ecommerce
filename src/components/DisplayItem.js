@@ -3,6 +3,7 @@ import store from '../store';
 import $ from 'jquery';
 
 export default class DisplayItem extends React.Component {
+
     addToCart = (product) => {
         $("#target").animate({marginLeft: 100}, 500);
         store.dispatch({

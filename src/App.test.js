@@ -8,7 +8,6 @@ import HomePage from './components/HomePage';
 import SearchBar from './components/SearchBar';
 
 describe("app component", () => {
-
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(<App />, div);
@@ -19,7 +18,6 @@ describe("app component", () => {
   })
 })
 
-
 describe("search bar", () => {
   it("should not appear on home page", () => {
     const wrapper = shallow(<HomePage />);
@@ -28,5 +26,13 @@ describe("search bar", () => {
   it("should appear on nav bar", () => {
     const wrapper = shallow(<CenterNavBar />);
     expect(wrapper.contains(<SearchBar/>)).toBe(true);
+  })
+  it("should update the input field", () => {
+    const wrapper = shallow(<SearchBar />);
+    const input = wrapper.find("input").first();
+    input.simulate('change', {
+      target: {value: 'asdf'}
+    })
+    expect(wrapper.state().inputVal).toEqual('asdf');
   })
 })

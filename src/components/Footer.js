@@ -1,7 +1,10 @@
 import React from 'react';
+import NewsLetterForm from './NewsLetterForm';
 
 function Footer(){
         return (
+            <>
+            <NewsLetterForm />
             <div className="footer-wrapper">
                 <div className="left">
                     <div>Contact Us</div>
@@ -22,6 +25,7 @@ function Footer(){
                     <img src="https://image.flaticon.com/sprites/new_packs/196535-payment-method.png" alt="payment methods"/>
                 </div>
             </div>
+            </>
         )
 }
 

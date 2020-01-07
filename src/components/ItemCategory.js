@@ -6,25 +6,25 @@ export default class ItemCategory extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: "all products"
+            selected: "all products",
+            categories: ['All Products', 'Phone', 'Tv', 'Small-appliance', 'Refrigerator', 'Watch', 'Action-Camera']
         }
+    }
+    componentDidMount() {
+        document.getElementsByClassName("item")[0].classList.add("selected");
     }
     select = (e) => {
         $('.item').removeClass('selected')
-        $(e.target).addClass("selected");
         store.dispatch({type: "CHANGE_CATEGORY",category: e.target.innerHTML.toLowerCase()})
         this.setState({selected: e.target.innerHTML.toLowerCase()})
+        $(e.target).addClass("selected");
     }
     render() {
         return (
                 <div className="category-wrapper">
-                    <div onClick={this.select} className='item selected'>All Products</div>
-                    <div onClick={this.select} className="item">Phone</div>
-                    <div onClick={this.select} className="item">Tv</div>
-                    <div onClick={this.select} className="item">Small-appliance</div>
-                    <div onClick={this.select} className="item">Refrigerator</div>
-                    <div onClick={this.select} className="item">Watch</div>
-                    <div onClick={this.select} className="item">Action-Camera</div>
+                    {this.state.categories.map((item, idx) => (
+                        <div className="item" onClick={this.select} key={idx}>{item}</div>
+                    ))}
                 </div>
         )
     }

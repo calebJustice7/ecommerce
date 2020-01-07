@@ -3,7 +3,7 @@ import store from '../store';
 import DisplayItem from './DisplayItem';
 
 export default class DisplayItemWrapper extends React.Component {
-    componentDidMount(){
+    componentDidMount() {
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
         fetch('https://my-json-server.typicode.com/tdmichaelis/json-api/products')
         .then(res => res.json())
@@ -13,7 +13,7 @@ export default class DisplayItemWrapper extends React.Component {
                 apiProductsArr: json
             })
         })
-    }
+      }
     componentWillUnmount() {
         this.unsubscribe();
     }

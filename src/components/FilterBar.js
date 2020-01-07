@@ -8,6 +8,7 @@ export default class FilterBar extends React.Component {
         el.classList.remove("three-row");
         el.classList.remove("four-row");
         el.classList.add(e.target.value);
+
     }
     render() {
         return (

@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import CheckoutSuccessful from './CheckoutSuccessful';
 import DiscountCodeForm from './DiscountCodeForm';
+import store from '../store';
 
 class CheckoutForm extends React.Component {
     constructor(props) {
@@ -12,6 +13,9 @@ class CheckoutForm extends React.Component {
         $(".loading-wrapper").hide();
     }
     submit = (e) => {
+        store.dispatch({
+            type: "CLEAR_CART"
+        })
         e.preventDefault();
         $(".loading-wrapper").fadeIn(200);
         setTimeout(() => {
@@ -23,7 +27,7 @@ class CheckoutForm extends React.Component {
         if(this.state.checkedOut === false) {
             return (
                 <div className="checkout-form-wrapper">
-                    <form>
+                    <form className="checkout-form">
                         <div className="check-input-wrapper">
                             <label>Email Address</label>
                             <input type="email" placeholder="Enter Email address"/>
