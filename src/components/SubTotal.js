@@ -9,6 +9,7 @@ export default class SubTotal extends React.Component {
         this.unsubscribe();
     }
     render(){
+        console.log(store.getState().apiDisplay.productsList);
         let totPrice = store.getState().apiDisplay.totalPrice;
         let wShipping = totPrice + 10;
         return (

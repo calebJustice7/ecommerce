@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './components/Comp.css';
-import store from './store/index';
+import './components/mediaQ.css';
 
 import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';

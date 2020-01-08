@@ -1,0 +1,11 @@
+@media only screen and (max-width: 800px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+    .top-section {
+        flex-direction: column;
+    }
+    .top-section .one-third-section {
+        margin: 10px 0;
+    }
+}
