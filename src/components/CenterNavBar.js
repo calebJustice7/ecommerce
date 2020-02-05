@@ -6,7 +6,7 @@ export default class CenterNavBar extends React.Component {
     render() {
         return (
             <div className="center center-navbar">
-                <Link to="/" className="link"><div>Home</div></Link>
+                <Link to="/ecommerce" className="link"><div>Home</div></Link>
                 <Link to="/products" className="link"><div>Products</div></Link>
                 <SearchBar />
             </div>

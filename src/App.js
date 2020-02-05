@@ -24,7 +24,7 @@ class App extends React.Component {
             <CartMessage/>
             <WishListMessage />
             <Switch>
-              <Route exact path="/" component={HomePage}/>
+              <Route exact path="/ecommerce" component={HomePage}/>
               <Route path="/products" component={ProductsPage}/>
               <Route path="/cart" component={CartPage} />
               <Route path="/product-info/:id" component={ProductInfoPage} />
