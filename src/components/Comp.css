@@ -627,7 +627,7 @@ button {
 
 .settings-page-wrapper {
     padding-top: 16%;
-    background-image: url('https://images.wallpaperscraft.com/image/city_night_buildings_sky_106151_3840x2400.jpg');
+    background-image: url('../night.jpg');
     background-size: cover;
     height: 60vh;
 }
