@@ -10,7 +10,7 @@ import LeftNavBar from './LeftNavBar';
 export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {clicks: 0}
+        this.state = {clicks: 1}
     }
     componentDidMount() {
         $(".sign-in-modal").fadeOut(200);
