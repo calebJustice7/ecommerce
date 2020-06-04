@@ -15,7 +15,7 @@ export default class Navbar extends React.Component {
     componentDidMount() {
         $(".sign-in-modal").fadeOut(200);
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
-        this.hideNav();
+        this.showNav();
     }
     hideNav(){
         $(".center-navbar").hide();
